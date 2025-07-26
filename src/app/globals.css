@@ -376,8 +376,9 @@ body {
   position: fixed;
   inset: 0;
   z-index: 50;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease-out;
 }
 
 .drawer {
@@ -385,10 +386,25 @@ body {
   inset-y: 0;
   left: 0;
   z-index: 50;
-  width: 256px;
-  background: #111827;
+  width: 320px;
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(197, 165, 114, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out;
   transform: translateX(-100%);
+  overflow: hidden;
+}
+
+.drawer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(197, 165, 114, 0.6), transparent);
+  opacity: 0.8;
 }
 
 .drawer-open {
@@ -400,38 +416,67 @@ body {
   height: 64px;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 0 32px;
+  border-bottom: 1px solid rgba(197, 165, 114, 0.15);
+  background: rgba(197, 165, 114, 0.05);
+  position: relative;
+}
+
+.drawer-header::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 32px;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, #C5A572, #D4BC8B);
+  border-radius: 1px;
 }
 
 .drawer-title {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: white;
+  background: linear-gradient(45deg, #D4BC8B 30%, #97783B 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 8px rgba(197, 165, 114, 0.2);
   margin: 0;
+  letter-spacing: 0.02em;
 }
 
 .drawer-close {
-  border-radius: 6px;
-  padding: 8px;
-  color: #9ca3af;
+  border-radius: 50%;
+  padding: 12px;
+  color: #C5A572;
   background: none;
-  border: none;
+  border: 1px solid rgba(197, 165, 114, 0.2);
+  background: rgba(197, 165, 114, 0.1);
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: all 0.3s ease;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .drawer-close:hover {
-  color: white;
+  color: #D4BC8B;
+  background: rgba(197, 165, 114, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(197, 165, 114, 0.3);
 }
 
 .close-icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .drawer-nav {
-  margin-top: 32px;
-  padding: 0 24px;
+  margin-top: 40px;
+  padding: 0 32px;
+  flex: 1;
 }
 
 .nav-list {
@@ -440,28 +485,85 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 
 .nav-link {
   display: block;
-  border-radius: 6px;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: all 0.2s ease;
+  border-radius: 16px;
+  padding: 16px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
-  color: #d1d5db;
+  color: #e0e0e0;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  letter-spacing: 0.01em;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(197, 165, 114, 0.1), transparent);
+  transition: left 0.5s ease;
 }
 
 .nav-link:hover {
-  background: #1f2937;
-  color: white;
+  background: rgba(197, 165, 114, 0.15);
+  color: #D4BC8B;
+  transform: translateX(8px);
+  border-color: rgba(197, 165, 114, 0.3);
+  box-shadow: 0 4px 16px rgba(197, 165, 114, 0.2);
+}
+
+.nav-link:hover::before {
+  left: 100%;
 }
 
 .nav-link.active {
-  background: #1f2937;
-  color: white;
+  background: rgba(197, 165, 114, 0.2);
+  color: #D4BC8B;
+  border-color: rgba(197, 165, 114, 0.4);
+  box-shadow: 0 6px 20px rgba(197, 165, 114, 0.25);
+  transform: translateX(4px);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 24px;
+  background: linear-gradient(180deg, #C5A572, #D4BC8B);
+  border-radius: 0 2px 2px 0;
+}
+
+/* Navigation Footer */
+.drawer-footer {
+  padding: 24px 32px;
+  border-top: 1px solid rgba(197, 165, 114, 0.15);
+  background: rgba(197, 165, 114, 0.05);
+}
+
+.drawer-footer-text {
+  font-size: 0.875rem;
+  color: #888;
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
+}
+
+.drawer-footer-highlight {
+  color: #C5A572;
+  font-weight: 600;
 }
 
 /* Chips Styles */

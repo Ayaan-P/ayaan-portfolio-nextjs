@@ -43,7 +43,7 @@ export default function Navigation() {
       {/* Drawer */}
       <div className={`drawer ${drawerOpen ? 'drawer-open' : ''}`}>
         <div className="drawer-header">
-          <h2 className="drawer-title">Menu</h2>
+          <h2 className="drawer-title">Navigation</h2>
           <button
             type="button"
             className="drawer-close"
@@ -77,6 +77,12 @@ export default function Navigation() {
             </li>
           </ul>
         </nav>
+        
+        <div className="drawer-footer">
+          <p className="drawer-footer-text">
+            Built with <span className="drawer-footer-highlight">passion</span> by Ayaan
+          </p>
+        </div>
       </div>
     </>
   )
