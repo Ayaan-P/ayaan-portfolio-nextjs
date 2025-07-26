@@ -2,12 +2,21 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Navigation() {
   const [drawerOpen, setDrawerOpen] = useState(false)
+  const pathname = usePathname()
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen)
+  }
+
+  const isActive = (path: string) => {
+    if (path === '/') {
+      return pathname === '/'
+    }
+    return pathname.startsWith(path)
   }
 
   return (
@@ -49,12 +58,20 @@ export default function Navigation() {
         <nav className="drawer-nav">
           <ul className="nav-list">
             <li>
-              <Link href="/" className="nav-link active" onClick={handleDrawerToggle}>
+              <Link 
+                href="/" 
+                className={`nav-link ${isActive('/') ? 'active' : ''}`} 
+                onClick={handleDrawerToggle}
+              >
                 Profile
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="nav-link" onClick={handleDrawerToggle}>
+              <Link 
+                href="/blog" 
+                className={`nav-link ${isActive('/blog') ? 'active' : ''}`} 
+                onClick={handleDrawerToggle}
+              >
                 Blog
               </Link>
             </li>
