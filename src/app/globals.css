@@ -71,20 +71,21 @@
   position: fixed;
   top: 10px;
   left: 10px;
-  background-color: rgba(26, 26, 26, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(197, 165, 114, 0.2);
-  border-radius: 8px;
+  background: rgba(26, 26, 26, 0.9);
+  border: 1px solid rgba(197, 165, 114, 0.3);
+  border-radius: 12px;
   padding: 12px;
   color: white;
   cursor: pointer;
-  z-index: 1201;
-  transition: background-color 0.3s ease;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .menu-button:hover {
-  background-color: rgba(197, 165, 114, 0.2);
-  border-color: rgba(197, 165, 114, 0.4);
+  background: rgba(197, 165, 114, 0.2);
+  border-color: rgba(197, 165, 114, 0.5);
+  transform: scale(1.05);
 }
 
 .menu-icon {
@@ -376,23 +377,27 @@ body {
 /* Drawer Styles */
 .drawer-overlay {
   position: fixed;
-  inset: 0;
-  z-index: 1200;
-  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(4px);
+  z-index: 999;
 }
 
 .drawer {
   position: fixed;
-  inset-y: 0;
+  top: 0;
+  bottom: 0;
   left: 0;
-  z-index: 1201;
-  width: 256px;
-  background: rgba(20, 20, 20, 0.95);
+  width: 280px;
+  background: rgba(26, 26, 26, 0.95);
+  border-right: 1px solid rgba(197, 165, 114, 0.3);
   backdrop-filter: blur(20px);
-  border-right: 1px solid rgba(197, 165, 114, 0.2);
-  transition: transform 0.3s ease-in-out;
   transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
 }
 
 .drawer-open {
@@ -401,8 +406,8 @@ body {
 
 .drawer-header {
   display: flex;
-  height: 64px;
   align-items: center;
+  height: 70px;
   justify-content: space-between;
   padding: 0 24px;
   border-bottom: 1px solid rgba(197, 165, 114, 0.1);
@@ -411,7 +416,9 @@ body {
 .drawer-title {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #D4BC8B;
+  background: linear-gradient(45deg, #D4BC8B 30%, #97783B 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: 0;
 }
 
@@ -419,15 +426,15 @@ body {
   border-radius: 6px;
   padding: 8px;
   color: #C5A572;
-  background: rgba(197, 165, 114, 0.1);
+  background: transparent;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .drawer-close:hover {
-  color: #D4BC8B;
   background: rgba(197, 165, 114, 0.2);
+  color: white;
 }
 
 .close-icon {
@@ -436,8 +443,9 @@ body {
 }
 
 .drawer-nav {
-  margin-top: 24px;
+  flex: 1;
   padding: 0 24px;
+  padding-top: 24px;
 }
 
 .nav-list {
@@ -451,7 +459,7 @@ body {
 
 .nav-link {
   display: block;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 12px;
   font-size: 1rem;
   font-weight: 500;
@@ -462,7 +470,7 @@ body {
 
 .nav-link:hover {
   background: rgba(197, 165, 114, 0.1);
-  color: white;
+  color: #D4BC8B;
 }
 
 .nav-link.active {
@@ -473,10 +481,9 @@ body {
 .drawer-footer {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
   padding: 24px;
   border-top: 1px solid rgba(197, 165, 114, 0.1);
+  width: 100%;
 }
 
 .drawer-footer-text {
