@@ -5,9 +5,9 @@ import { blogPosts } from '@/lib/blog-data'
 import ReactMarkdown from 'react-markdown'
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 function formatDate(dateString: string): string {
@@ -19,8 +19,9 @@ function formatDate(dateString: string): string {
   })
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = blogPosts.find(p => p.id === params.id)
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { id } = await params
+  const post = blogPosts.find(p => p.id === id)
 
   if (!post) {
     notFound()
@@ -75,7 +76,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps) {
-  const post = blogPosts.find(p => p.id === params.id)
+  const { id } = await params
+  const post = blogPosts.find(p => p.id === id)
   
   if (!post) {
     return {
