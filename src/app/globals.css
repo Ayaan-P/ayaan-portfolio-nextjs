@@ -1049,97 +1049,334 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  /* Mobile Navigation */
   .drawer {
-    width: 280px;
-  }
-  
-  .drawer-header,
-  .drawer-nav,
-  .drawer-footer {
-    padding-left: 24px;
-    padding-right: 24px;
+    width: 100vw;
+    max-width: 320px;
   }
   
   .menu-button {
-    top: 16px;
-    left: 16px;
-    width: 48px;
-    height: 48px;
-    padding: 12px;
+    top: 20px;
+    left: 20px;
+    padding: 16px;
+    border-radius: 16px;
   }
   
   .menu-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Mobile Container */
+  .container {
+    padding: 80px 16px 32px;
+  }
+
+  /* Mobile Profile */
+  .profile-container {
+    padding: 20px 16px;
+    min-height: auto;
+  }
+  
+  .profile-content {
+    gap: 20px;
+  }
+  
+  .avatar-image {
+    width: 140px;
+    height: 140px;
+    border: 3px solid rgba(197, 165, 114, 0.3);
+  }
+  
+  .name-container {
+    margin-bottom: 20px;
+  }
+  
+  .main-title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    text-align: center;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+  
+  /* Mobile Social Links */
+  .chips-container {
+    gap: 8px;
+    padding: 12px;
+    max-width: 100%;
+  }
+  
+  .chip {
+    padding: 10px 14px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .chip-icon {
     width: 18px;
     height: 18px;
   }
+  
+  /* Mobile Profile Cards */
+  .profile-content-container {
+    margin-top: 24px;
+  }
+  
+  .content-grid {
+    gap: 24px;
+  }
+  
+  .profile-card {
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 16px;
+  }
+  
+  .profile-card-header {
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 12px;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .card-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .sections-container {
+    gap: 20px;
+  }
+  
+  .section-layout {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .section-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .section-item-title {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .section-subtitle {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .section-date {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  
+  .section-description {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  /* Mobile Blog */
+  .blog-container {
+    padding: 80px 16px 40px;
+  }
+  
+  .blog-header {
+    margin-bottom: 40px;
+  }
+  
+  .blog-posts {
+    gap: 24px;
+  }
+  
+  .blog-post-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  
+  .blog-post-title {
+    font-size: 1.3rem;
+  }
+  
+  .blog-post-meta {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.8rem;
+  }
+  
+  .blog-post-tags {
+    gap: 6px;
+  }
+  
+  .blog-tag {
+    padding: 6px 10px;
+    font-size: 0.7rem;
+  }
+  
+  /* Mobile Blog Post */
+  .blog-post-container {
+    padding: 80px 16px 40px;
+  }
+  
+  .blog-post-main-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+  
+  .blog-post-content-section {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  
+  .blog-post-main-meta {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.9rem;
+  }
+  
+  .blog-post-main-tags {
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .blog-tag-main {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  
+  /* Mobile Expanded View */
+  .expanded-view-overlay {
+    padding: 10px;
+  }
+  
+  .expanded-view-content {
+    max-height: 95vh;
+    border-radius: 16px;
+  }
+  
+  .expanded-view-header {
+    padding: 16px;
+  }
+  
+  .expanded-view-body {
+    padding: 0 20px 20px;
+  }
+  
+  .expanded-section-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .expanded-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .expanded-section-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  
+  .expanded-section-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .expanded-section-content {
+    gap: 24px;
+  }
+  
+  .expanded-content-title {
+    font-size: 1.3rem;
+  }
+  
+  .skills-grid {
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .skill-tag {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .links-grid {
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .link-button {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+  }
+}
 
+@media (max-width: 480px) {
   .main-title {
     font-size: 2rem;
   }
   
-  .profile-container {
-    padding: 16px 12px;
-    min-height: 200px;
+  .subtitle {
+    font-size: 1rem;
   }
   
   .avatar-image {
     width: 120px;
     height: 120px;
-    border: 3px solid rgba(197, 165, 114, 0.3);
+  }
+  
+  .chips-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .chip {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
   }
   
   .profile-card {
-    padding: 24px;
-    margin-bottom: 32px;
-    border-radius: 16px;
-  }
-  
-  .profile-card-header {
-    gap: 12px;
-    margin-bottom: 24px;
-    padding: 8px;
-  }
-  
-  .card-icon {
-    font-size: 1.6rem;
-    width: 26px;
-    height: 26px;
-  }
-  
-  .section-title {
-    font-size: 1.2rem;
-  }
-  
-  .section-layout {
-    flex-direction: column;
-    gap: 16px;
+    padding: 16px;
   }
   
   .section-image {
-    width: 100px;
-    height: 100px;
-    align-self: center;
-  }
-  
-  .section-header {
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  .section-date {
-    align-self: flex-start;
+    width: 70px;
+    height: 70px;
   }
   
   .blog-post-main-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
-  .blog-post-content-section {
-    padding: 24px;
-  }
-  
-  .blog-post-main-meta {
-    flex-direction: column;
-    gap: 8px;
+  .expanded-section-title {
+    font-size: 1.4rem;
   }
 }
