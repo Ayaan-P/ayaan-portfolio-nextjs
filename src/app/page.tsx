@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { profileData, personalInfo, type ProfileSectionKey } from '@/lib/data'
+import { profileData, type ProfileSectionKey, type ProfileSection } from '@/lib/data'
 import { PROFILE_SECTIONS } from '@/lib/profile-sections'
 import ExpandedView from '@/components/expanded-view'
 import SocialLinks from '@/components/social-links'
@@ -10,14 +10,14 @@ import Navigation from '@/components/navigation'
 
 export default function HomePage() {
   const [expandedSection, setExpandedSection] = useState<{
-    section: any;
+    section: ProfileSection | null;
     open: boolean;
   }>({
     section: null,
     open: false
   })
 
-  const handleOpenExpanded = (section: any) => {
+  const handleOpenExpanded = (section: ProfileSection) => {
     setExpandedSection({
       section,
       open: true
@@ -75,7 +75,7 @@ export default function HomePage() {
                     <h2 className="section-title">{section.label}</h2>
                   </div>
                   <div className="sections-container">
-                    {profileData[section.key as ProfileSectionKey].map((item, index) => (
+                    {profileData[section.key as ProfileSectionKey].map((item) => (
                       <div key={item.id} className="section-content" onClick={() => handleOpenExpanded(item)}>
                         <div className="section-layout">
                           {!item.about && (

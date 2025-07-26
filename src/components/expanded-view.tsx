@@ -2,10 +2,11 @@
 
 import { useEffect } from 'react'
 import Image from 'next/image'
+import { type ProfileSection } from '@/lib/data'
 
 interface ExpandedViewProps {
   open: boolean
-  section: any
+  section: ProfileSection | null
   onClose: () => void
 }
 
@@ -104,7 +105,7 @@ export default function ExpandedView({ open, section, onClose }: ExpandedViewPro
                   <div className="expanded-links">
                     <h3 className="expanded-content-title">Links</h3>
                     <div className="links-grid">
-                      {section.expandedDetails.links.map((link: any, index: number) => (
+                      {section.expandedDetails.links.map((link, index: number) => (
                         <a
                           key={index}
                           href={link.url}

@@ -135,6 +135,13 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
       imgSrc: "/images/Cathedral.png",
       expandedDetails: {
         fullDescription: "Cathedral School provided excellent preparation for higher education with emphasis on critical thinking, scientific methodology, and academic excellence.",
+        skills: [
+          "Critical Thinking",
+          "Scientific Methodology",
+          "Mathematics",
+          "Academic Excellence",
+          "Science Competitions"
+        ],
         achievements: [
           "Top 5% of graduating class",
           "Science Olympiad participant",
