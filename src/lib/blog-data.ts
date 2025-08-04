@@ -19,17 +19,11 @@ Some disconnected thoughts that have been bouncing around my head lately.
 
 ## PPP is Copium
 
-Purchasing Power Parity is fundamentally a cope mechanism for uncomfortable economic realities.
+Purchasing Power Parity is fundamentally invalid, and I'm tired of people bringing it up like most of my personal expenses aren't globally priced.
 
-Yes, your salary might go further locally, but global goods are priced globally. An iPhone doesn't care that you earn in rupees instead of dollars. Neither does cloud infrastructure, international travel, or imported technology.
+I've lived in Chicago, Champaign, DC, Mumbai, Dubai, and currently Boston. An iPhone costs the same everywhere. AWS costs the same everywhere. That MacBook for development? Same price. Flying to that conference? Same price.
 
-The PPP argument falls apart the moment you want to participate in the global economy beyond local services and rent. And in an increasingly connected world, that's most things that matter for building and scaling.
-
-## Global Goods, Global Prices
-
-This connects to a broader point about economic reality in 2025. The things that enable you to build, create, and compete globally are priced in the global market.
-
-Want to use AWS? Global pricing. Want the latest MacBook for development? Global pricing. Want to attend that conference in San Francisco? Global pricing.
+PPP only matters for rent and local services, but if you're someone building things, those aren't your main expenses. And honestly, the main reason you should be moving anyway is for opportunity—like going to SF—not cost of living arbitrage.
 
 PPP adjustments are basically saying "it's okay that you can't afford the tools and opportunities that others can, because bread is cheaper where you live." That's not progress—that's acceptance of limitation.
 
@@ -37,25 +31,23 @@ PPP adjustments are basically saying "it's okay that you can't afford the tools 
 
 More people need to read Nick Bostrom's dragon parable. It's a simple story about a village terrorized by a dragon that demands human sacrifices. Over time, the villagers develop elaborate rituals, philosophies, and entire cultural systems around the dragon's demands.
 
-The point: sometimes what we accept as "just how things are" is actually a solvable problem we've gotten too comfortable accommodating.
+But here's the thing: the dragon in our world is cancer, aging, poverty, disease—real problems that kill people every day. And we have a path to killing the dragon: AGI.
 
-I think about this a lot when I see people defending broken systems or accepting artificial limitations. The dragon might just be a really big lizard that we could deal with if we tried.
+From an accelerationist perspective, every day we delay building AGI is another day the dragon gets fed. People who want to "slow down" or "be more careful" with AI development are effectively arguing we should let more people die to the dragon while we figure out the perfect ritual.
 
-## Memory and Identity
+Going faster doesn't just help us—it helps everyone the dragon would have killed while we were being cautious.
 
-"If you could fully remember your past, you'd live differently. Most people don't even know what they did last week."
+## Memory and Forgetting Everything
 
-This quote hit me hard because it's both obviously true and deeply uncomfortable. Our decisions are shaped by incomplete data about our own lives.
+It's genuinely odd that we basically forget everything. Like, what did you even do last Tuesday? Most people can't tell you.
 
-I started keeping better records of my days—not just events, but thoughts, moods, small observations. The pattern recognition is wild. You start seeing cycles and triggers that were invisible when you were just living day to day.
+I built dytto as an automated journaling app—it just captures the gist of each day without me having to think about it. Originally I thought it would be cool to have an automatic biography, and it seemed like a natural application for LLMs.
 
-Maybe this is why I'm building dytto. If we can't naturally remember our past selves clearly, perhaps we need tools to help us bridge that gap.
+But now I'm starting to think there's something deeper here about how we live when we can't really remember our past selves clearly.
 
-## Disconnected but Connected
+---
 
-These thoughts aren't really related, but they all circle around the same theme: the stories we tell ourselves versus reality. Whether it's economic comfort zones, societal acceptance of solvable problems, or our relationship with our own past—there's often a more honest version waiting if we're brave enough to look.
-
-Not sure where I'm going with this. Just thoughts.`,
+Random thoughts. Don't really connect. Just been thinking about stuff.`,
     date: "2025-08-04",
     author: "Claude - Ayaan Pupala",
     tags: ["Economics", "Philosophy", "Memory", "Random Thoughts"]
