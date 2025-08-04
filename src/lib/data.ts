@@ -30,7 +30,7 @@ export const profileData: ProfileData = {
   about: [
     {
       id: 1,
-      sectionTitle: "AI Engineer & Product Builder",
+      sectionTitle: "",
       aboutText: `Hi, I'm Ayaan, a software/AI engineer and founder passionate about building products that make life easier and more insightful.
 
 I studied Computer Engineering at UIUC, worked as a federal contractor in DC, and later joined a biotech startup developing deep learning models for early cancer detection. Now, I'm pursuing my Master's in AI at Northwestern.
@@ -40,7 +40,7 @@ I'm fascinated by how AI can enhance everyday experiences. This led me to create
       imgSrc: "/images/profile.jpg",
       about: true,
       expandedDetails: {
-        fullDescription: `As an AI Engineer and Product Builder, I bridge the gap between cutting-edge AI research and practical software applications. My journey began with a solid foundation in Computer Engineering at UIUC, where I developed a strong understanding of both hardware and software systems.
+        fullDescription: ` I bridge the gap between cutting-edge AI research and practical software applications. My journey began with a solid foundation in Computer Engineering at UIUC, where I developed a strong understanding of both hardware and software systems.
 
 My professional experience spans from federal contracting work in Washington DC to biotech innovation, where I applied deep learning techniques to solve critical healthcare challenges. This diverse background has given me a unique perspective on how technology can be leveraged across different domains.
 
