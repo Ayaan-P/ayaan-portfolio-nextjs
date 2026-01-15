@@ -80,7 +80,7 @@ export default function Navigation() {
         
         <div className="drawer-footer">
           <p className="drawer-footer-text">
-            Built with <span className="drawer-footer-highlight">passion</span> by Ayaan
+            Built by Ayaan
           </p>
         </div>
       </div>

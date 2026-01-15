@@ -218,7 +218,8 @@
   position: relative;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 40px;
-  overflow: hidden;
+  overflow: visible;
+  margin-top: 30px;
 }
 
 .profile-card::before {
@@ -250,20 +251,9 @@
   gap: 16px;
   margin-bottom: 32px;
   padding: 12px;
-  border-bottom: 2px solid rgba(197, 165, 114, 0.2);
   position: relative;
 }
 
-.profile-card-header::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, #C5A572, #D4BC8B);
-  border-radius: 1px;
-}
 
 .card-icon {
   color: #C5A572;
@@ -271,6 +261,10 @@
   filter: drop-shadow(0 2px 4px rgba(197, 165, 114, 0.3));
   width: 32px;
   height: 32px;
+  position: absolute;
+  top: -48px;
+  left: 32px;
+  z-index: 10;
 }
 
 .section-title {
@@ -497,6 +491,45 @@ body {
   color: #C5A572;
 }
 
+/* About Section */
+.about-section {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.about-content {
+  color: #d0d0d0;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.about-content p {
+  margin: 12px 0;
+}
+
+/* Working On Section */
+.working-on-section {
+  width: 100%;
+  max-width: 700px;
+  margin: 16px auto 24px;
+  text-align: center;
+}
+
+.working-on-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 16px;
+  background: linear-gradient(45deg, #D4BC8B 30%, #97783B 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Chips Styles */
 .chips-container {
   display: flex;
@@ -506,7 +539,7 @@ body {
   padding: 16px;
   width: 100%;
   max-width: 700px;
-  margin-top: 16px;
+  margin: 0 auto;
 }
 
 .chip {
@@ -1102,14 +1135,42 @@ body {
     font-size: 1.1rem;
     line-height: 1.4;
   }
-  
+
+  /* Mobile About Section */
+  .about-section {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 0 12px;
+  }
+
+  .about-content {
+    font-size: 0.95rem;
+  }
+
+  .about-content p {
+    margin: 4px 0;
+  }
+
+  /* Mobile Working On Section */
+  .working-on-section {
+    margin: 12px auto 20px;
+    padding: 0 12px;
+  }
+
+  .working-on-title {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+
   /* Mobile Social Links */
   .chips-container {
     gap: 8px;
     padding: 12px;
     max-width: 100%;
+    flex-wrap: wrap;
+    margin: 0 auto;
   }
-  
+
   .chip {
     padding: 10px 14px;
     font-size: 0.8rem;
@@ -1118,7 +1179,7 @@ body {
     display: flex;
     align-items: center;
   }
-  
+
   .chip-icon {
     width: 18px;
     height: 18px;
@@ -1137,8 +1198,9 @@ body {
     padding: 20px;
     margin-bottom: 24px;
     border-radius: 16px;
+    margin-top: 25px;
   }
-  
+
   .profile-card-header {
     gap: 16px;
     margin-bottom: 20px;
@@ -1146,10 +1208,13 @@ body {
     flex-direction: row;
     align-items: center;
   }
-  
+
   .card-icon {
     width: 28px;
     height: 28px;
+    position: absolute;
+    top: -40px;
+    left: 20px;
   }
   
   .section-title {
@@ -1355,6 +1420,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    margin: 0 auto;
   }
   
   .chip {

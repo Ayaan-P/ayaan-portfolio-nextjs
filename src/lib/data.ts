@@ -31,11 +31,10 @@ export const profileData: ProfileData = {
     {
       id: 1,
       sectionTitle: "",
-      aboutText: `Hi, I'm Ayaan, a software/AI engineer and founder passionate about building products that make life easier and more insightful.
+      aboutText: `I like building stuff with AI.
 
-I studied Computer Engineering at UIUC, worked as a federal contractor in DC, and later joined a biotech startup developing deep learning models for early cancer detection. Now, I'm pursuing my Master's in AI at Northwestern.
 
-I'm fascinated by how AI can enhance everyday experiences. This led me to create dytto, an AI-driven journaling app that seamlessly captures and analyzes daily life.`,
+Currently building dytto, an AI-driven journaling app that seamlessly captures and analyzes daily life.`,
       date: "",
       imgSrc: "/images/profile.jpg",
       about: true,

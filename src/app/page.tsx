@@ -57,12 +57,24 @@ export default function HomePage() {
               <h1 className="main-title fade-in-delay-1">
                 Ayaan Pupala
               </h1>
-              <p className="subtitle fade-in-delay-2">
-                AI Engineer & Product Builder
-              </p>
             </div>
-            
-            <SocialLinks />
+
+            {/* About Section */}
+            <div className="about-section fade-in-delay-2">
+              {profileData.about.map((item) => (
+                <div key={item.id} className="about-content">
+                  {item.aboutText.split('\n\n').map((paragraph, pIndex) => (
+                    <p key={pIndex}>{paragraph}</p>
+                  ))}
+                </div>
+              ))}
+            </div>
+
+            {/* Working On Section */}
+            <div className="working-on-section fade-in-delay-3">
+              <h3 className="working-on-title">Check out what I&apos;m working on</h3>
+              <SocialLinks />
+            </div>
           </div>
           
           {/* Profile Content */}
@@ -72,7 +84,7 @@ export default function HomePage() {
                 <div key={section.key} className="profile-card">
                   <div className="profile-card-header">
                     <section.icon className="card-icon" />
-                    <h2 className="section-title">{section.label}</h2>
+                    {/* <h2 className="section-title">{section.label}</h2> */}
                   </div>
                   <div className="sections-container">
                     {profileData[section.key as ProfileSectionKey].map((item) => (
@@ -101,7 +113,7 @@ export default function HomePage() {
                                 <span className="section-date">{item.date}</span>
                               )}
                             </div>
-                            <div className="section-description">
+                            {/* <div className="section-description">
                               {item.about ? (
                                 <div>
                                   {item.aboutText.split('\n').map((paragraph, pIndex) => (
@@ -118,7 +130,7 @@ export default function HomePage() {
                                   }
                                 </p>
                               )}
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                       </div>
