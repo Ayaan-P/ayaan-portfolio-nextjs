@@ -31,8 +31,7 @@ export const profileData: ProfileData = {
     {
       id: 1,
       sectionTitle: "",
-      aboutText: `I like building stuff with AI.
-
+      aboutText: `
 
 Currently building dytto, an AI-driven journaling app that seamlessly captures and analyzes daily life.`,
       date: "",
@@ -88,8 +87,7 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
         ],
         achievements: [
           "Current GPA: 4.0/4.0",
-          "Teaching Assistant for Machine Learning course",
-          "Research focus on generative AI applications"
+
         ],
         links: [
           {
@@ -119,9 +117,7 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
           "Embedded Systems"
         ],
         achievements: [
-          "Dean's List multiple semesters",
-          "Completed senior capstone project on IoT systems",
-          "Active member of IEEE student chapter"
+  
         ]
       }
     },
@@ -135,16 +131,11 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
       expandedDetails: {
         fullDescription: "Cathedral School provided excellent preparation for higher education with emphasis on critical thinking, scientific methodology, and academic excellence.",
         skills: [
-          "Critical Thinking",
-          "Scientific Methodology",
-          "Mathematics",
-          "Academic Excellence",
-          "Science Competitions"
+
+
         ],
         achievements: [
-          "Top 5% of graduating class",
-          "Science Olympiad participant",
-          "Mathematics competition winner"
+
         ]
       }
     }
@@ -153,23 +144,17 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
     {
       id: 1,
       sectionTitle: "American Family Insurance",
-      subtitle: "Software Engineering Intern",
+      subtitle: "Software Engineer",
       aboutText: "Upcoming summer internship focusing on innovative software solutions in insurance technology.",
-      date: "June 2025 - August 2025",
+      date: "June 2025 - Present",
       imgSrc: "/images/Boston.png",
       expandedDetails: {
         fullDescription: "This internship will focus on leveraging modern software development practices and AI technologies to enhance insurance products and customer experiences.",
         skills: [
-          "Full Stack Development",
-          "Cloud Computing (AWS/Azure)",
-          "Data Analytics & Visualization",
-          "Insurance Technology (InsurTech)",
-          "API Development",
-          "Microservices Architecture"
+
         ],
         achievements: [
-          "Selected from competitive applicant pool",
-          "Project focus on AI-enhanced customer service"
+
         ]
       }
     },
@@ -183,20 +168,10 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
       expandedDetails: {
         fullDescription: "At Epigeneres, I worked on cutting-edge AI applications in healthcare, specifically focusing on early cancer detection through advanced image analysis. This role combined my technical skills with meaningful impact in medical technology.",
         skills: [
-          "Deep Learning (PyTorch, TensorFlow)",
-          "Medical Image Analysis",
-          "Computer Vision",
-          "Data Pipeline Development",
-          "Model Optimization & Deployment",
-          "Healthcare Compliance (HIPAA)",
-          "Statistical Analysis",
-          "Research & Development"
+      
         ],
         achievements: [
-          "Improved model accuracy by 15% through novel architecture design",
-          "Reduced inference time by 40% through optimization techniques",
-          "Contributed to 2 research publications",
-          "Developed automated data preprocessing pipeline"
+
         ]
       }
     },
@@ -210,20 +185,10 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
       expandedDetails: {
         fullDescription: "As a Software Engineer at Karsun Solutions, I worked on critical government systems that serve millions of users. My role involved full-stack development, system architecture, and ensuring compliance with federal security standards.",
         skills: [
-          "Enterprise Application Development",
-          "React.js & Node.js",
-          "Cloud Migration (AWS)",
-          "Agile Development Methodologies",
-          "RESTful API Design",
-          "Database Design (PostgreSQL, MongoDB)",
-          "Security Compliance (FedRAMP)",
-          "DevOps & CI/CD"
+  
         ],
         achievements: [
-          "Led migration of legacy FAA system to modern cloud architecture",
-          "Improved system performance by 60% through optimization",
-          "Mentored 3 junior developers",
-          "Received 'Outstanding Performance' award 2 consecutive years"
+
         ]
       }
     },
@@ -237,17 +202,10 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
       expandedDetails: {
         fullDescription: "This internship provided valuable exposure to fintech and payment processing systems. I worked on critical components of payment gateways that handle millions of transactions daily.",
         skills: [
-          "Payment Gateway Integration",
-          "Financial Transaction Processing",
-          "API Development & Testing",
-          "Security Protocols",
-          "Database Management",
-          "Quality Assurance"
+
         ],
         achievements: [
-          "Developed automated testing suite for payment APIs",
-          "Contributed to PCI DSS compliance initiatives",
-          "Optimized transaction processing speed by 25%"
+
         ],
         links: [
           {
@@ -269,21 +227,10 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
       expandedDetails: {
         fullDescription: "dytto is a sophisticated AI-powered personal journal that automatically captures and transforms your daily experiences into meaningful narratives.",
         skills: [
-          "React Native/Expo",
-          "TypeScript",
-          "Python/FastAPI",
-          "PostgreSQL/Supabase",
-          "Gemini 2.0 Flash",
-          "ElevenLabs Conversational AI",
-          "Vector Embeddings (pgvector)",
-          "Firebase Push Notifications",
-          "RESTful API Design"
+    
         ],
         achievements: [
-          "Implemented advanced vector search with semantic memory retrieval",
-          "Created comprehensive context analysis system with behavioral patterns",
-          "Deployed scalable backend architecture handling real-time AI processing",
-          "Achieved seamless voice-to-text integration with natural conversation flow"
+     
         ],
         links: [
           {
@@ -307,19 +254,10 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
       expandedDetails: {
         fullDescription: "This project addresses one of the most challenging problems in pharmaceutical research: predicting how drugs will interact with biological targets. By leveraging machine learning on molecular data, the system can identify potential drug candidates much faster than traditional methods.",
         skills: [
-          "XGBoost & Ensemble Methods",
-          "Molecular Feature Engineering",
-          "SMILES Chemical Notation",
-          "Bioinformatics",
-          "Python Scientific Stack",
-          "Data Preprocessing",
-          "Model Validation"
+
         ],
         achievements: [
-          "Achieved 85% prediction accuracy on benchmark datasets",
-          "Processed over 100,000 drug-target pairs",
-          "Implemented novel feature extraction techniques",
-          "Contributed to open-source drug discovery tools"
+      
         ],
         links: [
           {
@@ -343,19 +281,10 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
       expandedDetails: {
         fullDescription: "This project addresses a critical challenge in medical imaging: balancing image quality with patient safety. Low-dose CT scans reduce radiation exposure but often suffer from noise and reduced resolution. Our GAN-based approach enhances these images to diagnostic quality.",
         skills: [
-          "Generative Adversarial Networks (GANs)",
-          "Medical Image Processing",
-          "Deep Learning (PyTorch)",
-          "Computer Vision",
-          "Healthcare Applications",
-          "Image Enhancement",
-          "DICOM Processing"
+  
         ],
         achievements: [
-          "Improved image quality metrics by 40%",
-          "Reduced noise while preserving diagnostic features",
-          "Validated on clinical CT datasets",
-          "Potential for real-world medical deployment"
+     
         ],
         links: [
           {
@@ -375,19 +304,10 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
       expandedDetails: {
         fullDescription: "This project demonstrates the application of diffusion models to game asset creation. By training on Minecraft's distinctive 16x16 texture format, the model learns to generate new textures that maintain the game's aesthetic while providing creative variations.\n\nThe web interface allows users to browse generated textures, select from available labels, and create new textures on demand. This showcases how AI can assist game developers and modders in creating consistent, high-quality assets.",
         skills: [
-          "Flask Web Framework",
-          "PyTorch Diffusion Models",
-          "Computer Vision",
-          "Web Development",
-          "Game Asset Pipeline",
-          "Image Processing",
-          "Model Deployment"
+     
         ],
         achievements: [
-          "Successfully trained diffusion model on game textures",
-          "Created intuitive web interface for non-technical users",
-          "Achieved high-quality 16x16 texture generation",
-          "Implemented real-time generation capabilities"
+     
         ],
         links: [
           {
@@ -411,19 +331,10 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
       expandedDetails: {
         fullDescription: "The Chicago Energy Rating Predictor addresses urban sustainability by helping architects and developers optimize building designs for energy efficiency. By analyzing patterns in existing buildings, the model can predict how new constructions will perform under Chicago's energy rating system.\n\nThis tool enables data-driven decisions in the design phase, potentially saving significant energy costs and reducing environmental impact. The model considers factors like building orientation, materials, HVAC systems, and neighborhood characteristics.",
         skills: [
-          "Regression Modeling",
-          "Feature Engineering",
-          "Ensemble Learning Methods",
-          "Urban Data Analysis",
-          "Geospatial Analytics",
-          "Sustainability Metrics",
-          "Data Visualization"
+
         ],
         achievements: [
-          "Achieved 92% accuracy in energy rating prediction",
-          "Analyzed 50,000+ Chicago building records",
-          "Identified key factors affecting energy efficiency",
-          "Created actionable insights for architects"
+  
         ],
         links: [
           {
@@ -447,20 +358,10 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
       expandedDetails: {
         fullDescription: "This project showcases comprehensive game development skills through creating a complete Pokémon-inspired experience. The game features multiple interconnected systems including combat mechanics, character progression, inventory management, and world exploration.\n\nBuilt entirely in Unity with custom C# scripts, the game demonstrates understanding of object-oriented programming, game state management, and user experience design. All pixel art assets were created specifically for this project.",
         skills: [
-          "Unity Game Engine",
-          "C# Programming",
-          "2D Animation & Sprites",
-          "Game Design Principles",
-          "Turn-based Combat Systems",
-          "Pixel Art Creation",
-          "Audio Integration",
-          "UI/UX Design"
+
         ],
         achievements: [
-          "Completed full game with 10+ hours of content",
-          "Implemented complex battle system with 20+ moves",
-          "Created 50+ original pixel art assets",
-          "Designed balanced progression system"
+   
         ],
         links: [
           {
@@ -484,20 +385,10 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
       expandedDetails: {
         fullDescription: "dytto-gen represents the future of creative collaboration between humans and AI. The platform enables digital creators to monetize their unique styles by training personalized AI models, while users gain access to diverse creative tools.\n\nThe system automatically handles model training, content generation, and royalty distribution, creating a sustainable ecosystem where creativity is rewarded. This addresses the growing concern about AI replacing artists by instead empowering them with new revenue streams.",
         skills: [
-          "Generative AI (Stable Diffusion, GPT)",
-          "Machine Learning Model Training",
-          "Full Stack Development",
-          "Blockchain/Smart Contracts",
-          "Payment Processing",
-          "Cloud Infrastructure",
-          "API Development",
-          "Content Management Systems"
+
         ],
         achievements: [
-          "Successfully deployed MVP with 100+ beta users",
-          "Implemented automated royalty distribution system",
-          "Created seamless model training pipeline",
-          "Established partnerships with digital artists"
+
         ],
         links: [
           {
@@ -521,19 +412,10 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
       expandedDetails: {
         fullDescription: "This cutting-edge research tool addresses reproducibility challenges in social science by enabling large-scale simulation of human behavior studies. Using LLMs as proxies for human participants, researchers can quickly test hypotheses, explore parameter sensitivity, and validate findings.\n\nThe system supports complex experimental designs, automatic data collection, and statistical analysis. This approach could revolutionize social science research by making large-scale studies more accessible and cost-effective.",
         skills: [
-          "Large Language Models (GPT, Claude)",
-          "Social Science Methodology",
-          "Experimental Design",
-          "Statistical Analysis",
-          "Python Data Science Stack",
-          "Research Automation",
-          "Behavioral Modeling"
+
         ],
         achievements: [
-          "Successfully replicated 5 classic psychology experiments",
-          "Achieved 85% correlation with original human studies",
-          "Developed novel sensitivity analysis framework",
-          "Contributed to academic research methodology"
+
         ],
         links: [
           {
