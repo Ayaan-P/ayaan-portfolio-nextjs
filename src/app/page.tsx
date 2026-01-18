@@ -77,21 +77,44 @@ export default function HomePage() {
               <section.icon className="divider-icon" />
             </div>
             <div className="app-drawer">
-              {profileData[section.key as 'education' | 'work' | 'projects'].map((item) => (
-                <div
-                  key={item.id}
-                  className="app-icon"
-                  onClick={() => handleOpenExpanded(item)}
-                >
-                  <Image
-                    src={item.imgSrc}
-                    alt={item.sectionTitle}
-                    width={120}
-                    height={120}
-                    className="icon-image"
-                  />
-                </div>
-              ))}
+              {profileData[section.key as 'tools' | 'education' | 'work' | 'projects'].map((item) => {
+                const isTools = section.key === 'tools';
+                const directLink = item.expandedDetails?.links?.[0];
+                const hasDirectLink = isTools && directLink;
+
+                return hasDirectLink ? (
+                  <a
+                    key={item.id}
+                    href={directLink.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="app-icon"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <Image
+                      src={item.imgSrc}
+                      alt={item.sectionTitle}
+                      width={120}
+                      height={120}
+                      className="icon-image"
+                    />
+                  </a>
+                ) : (
+                  <div
+                    key={item.id}
+                    className="app-icon"
+                    onClick={() => handleOpenExpanded(item)}
+                  >
+                    <Image
+                      src={item.imgSrc}
+                      alt={item.sectionTitle}
+                      width={120}
+                      height={120}
+                      className="icon-image"
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
         ))}

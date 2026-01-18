@@ -19,6 +19,7 @@ export interface ProfileSection {
 
 interface ProfileData {
   about: ProfileSection[];
+  tools: ProfileSection[];
   education: ProfileSection[];
   work: ProfileSection[];
   projects: ProfileSection[];
@@ -61,6 +62,68 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
           "Founded dytto - AI-powered journaling platform",
           "Maintaining 4.0 GPA in Northwestern's AI Master's program",
           "Published research on drug-target interaction prediction"
+        ]
+      }
+    }
+  ],
+  tools: [
+    {
+      id: 1,
+      sectionTitle: "Tools & Resources",
+      subtitle: "Project Management",
+      aboutText: "Explore my workflow tools and productivity resources for managing projects.",
+      date: "Ongoing",
+      imgSrc: "/images/tools-icon.png",
+      expandedDetails: {
+        fullDescription: "Collection of tools and platforms I use for project management, organization, and workflow optimization.",
+        skills: [
+          "Project Management",
+          "Team Collaboration",
+          "Backlog Management",
+          "Workflow Optimization",
+          "Development Tools",
+          "Productivity Systems"
+        ],
+        achievements: [
+          "Streamlined project workflows",
+          "Optimized team collaboration",
+          "Built efficient development processes"
+        ],
+        links: [
+          {
+            label: "Backlog",
+            url: "https://back-log.com"
+          }
+        ]
+      }
+    },
+    {
+      id: 2,
+      sectionTitle: "Dytto",
+      subtitle: "AI-Powered Journaling",
+      aboutText: "AI-driven journaling app that seamlessly captures and analyzes daily life.",
+      date: "Ongoing",
+      imgSrc: "/images/dytto-icon.png",
+      expandedDetails: {
+        fullDescription: "Dytto is an AI-powered journaling application that transforms how people capture and reflect on their daily experiences. By automating the collection of contextual data and generating personalized narratives, dytto makes journaling effortless while creating a rich, searchable memory bank.",
+        skills: [
+          "React & Next.js",
+          "AI/ML Integration",
+          "TypeScript",
+          "Cloud Architecture",
+          "Real-time Data Processing",
+          "NLP & Context Analysis"
+        ],
+        achievements: [
+          "AI-powered daily capture and analysis",
+          "Personalized narrative generation",
+          "Searchable memory bank system"
+        ],
+        links: [
+          {
+            label: "Visit Dytto",
+            url: "https://dytto.app"
+          }
         ]
       }
     }
