@@ -2,6 +2,8 @@
 .App {
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Enhanced Animations */
@@ -1282,7 +1284,7 @@ body {
 
   /* Mobile Navigation */
   .drawer {
-    width: 100vw;
+    width: 100%;
     max-width: 320px;
   }
 
