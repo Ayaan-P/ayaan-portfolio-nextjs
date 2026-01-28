@@ -52,7 +52,7 @@ export default function HomePage() {
             />
           </div>
           <h1 className="page-title">Ayaan Pupala</h1>
-          <p className="page-subtitle">I like to build with AI</p>
+          {/* <p className="page-subtitle">I like to build with AI</p> */}
 
           <div className="about-wrapper">
             {profileData.about.map((item) => (
