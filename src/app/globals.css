@@ -359,6 +359,10 @@
 }
 
 /* Body Styles */
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: #0a0a0a;
   color: #ededed;
@@ -366,6 +370,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Drawer Styles */
@@ -1586,6 +1591,35 @@ body {
   .link-button {
     padding: 10px 16px;
     font-size: 0.8rem;
+  }
+}
+
+@media (hover: none) {
+  .app-icon:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .app-icon:hover .icon-image {
+    transform: none;
+  }
+
+  .avatar-image:hover {
+    transform: none;
+  }
+
+  .profile-card:hover {
+    transform: none;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .section-content:hover {
+    transform: none;
+  }
+
+  .chip:hover {
+    transform: none;
+    box-shadow: none;
   }
 }
 

@@ -64,10 +64,6 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="social-wrapper">
-            <p className="social-label">Links</p>
-            <SocialLinks />
-          </div>
         </div>
 
         {/* Sections with Icons */}
@@ -118,6 +114,10 @@ export default function HomePage() {
             </div>
           </div>
         ))}
+
+        <div className="social-wrapper">
+          <SocialLinks />
+        </div>
       </div>
 
       <ExpandedView
