@@ -126,6 +126,48 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
           }
         ]
       }
+    },
+    {
+      id: 3,
+      sectionTitle: "dytto-gen",
+      subtitle: "AI Content Marketplace",
+      aboutText: "Platform where creators train AI models on their style and earn royalties from generated content.",
+      date: "2024-2025",
+      imgSrc: "/images/dytto-gen.png",
+      expandedDetails: {
+        fullDescription: "dytto-gen represents the future of creative collaboration between humans and AI. The platform enables digital creators to monetize their unique styles by training personalized AI models, while users gain access to diverse creative tools.\n\nThe system automatically handles model training, content generation, and royalty distribution, creating a sustainable ecosystem where creativity is rewarded. This addresses the growing concern about AI replacing artists by instead empowering them with new revenue streams.",
+        skills: [],
+        achievements: [],
+        links: [
+          {
+            label: "dytto-gen Platform",
+            url: "https://dytto-gen.vercel.app/"
+          },
+          {
+            label: "Creator Onboarding",
+            url: "https://dytto-gen.vercel.app/creators"
+          }
+        ]
+      }
+    },
+    {
+      id: 4,
+      sectionTitle: "FundFish",
+      subtitle: "AI-Powered Nonprofit Funding Discovery",
+      aboutText: "AI-powered platform helping nonprofits discover funding opportunities and focus on what matters most: their mission.",
+      date: "2025",
+      imgSrc: "/images/fundfish.png",
+      expandedDetails: {
+        fullDescription: "FundFish is a smart, efficient system that acts as a digital scout for nonprofit fundraising teams. We proactively find and prioritize funding opportunities, transforming the grant discovery process from reactive and manual to proactive and data-driven.\n\nBy automating the tedious task of searching for relevant Requests For Proposals (RFPs) and matching them to your organization's mission, we save valuable time—previously estimated at over 20 hours per week per fundraiser.\n\nKey features include Intelligent Opportunity Discovery (AI agents continuously scan federal databases like Grants.gov and SAM.gov), Smart Match Scoring, AI-Powered Insights with winning strategies from similar past RFPs, and Document Intelligence that extracts key information from uploaded organizational documents.\n\nFundFish was born from a partnership between Per Scholas and Northwestern University's MBAi/MSAi capstone program in Fall 2025. Per Scholas CEO Plinio Ayala called it \"a potential game changer\" for how the organization operates. The project was selected for feature coverage by Northwestern University and presented at the 2025 Capstone Showcase.",
+        skills: [],
+        achievements: [],
+        links: [
+          {
+            label: "FundFish Platform",
+            url: "https://fundfish.pro"
+          }
+        ]
+      }
     }
   ],
   education: [
@@ -434,33 +476,6 @@ The culmination of my passion and expertise is dytto, an AI-powered journaling a
           {
             label: "Download Game",
             url: "#"
-          }
-        ]
-      }
-    },
-    {
-      id: 7,
-      sectionTitle: "dytto-gen",
-      subtitle: "AI Content Marketplace",
-      aboutText: "Platform where creators train AI models on their style and earn royalties from generated content.",
-      date: "2024-2025",
-      imgSrc: "/images/logo.png",
-      expandedDetails: {
-        fullDescription: "dytto-gen represents the future of creative collaboration between humans and AI. The platform enables digital creators to monetize their unique styles by training personalized AI models, while users gain access to diverse creative tools.\n\nThe system automatically handles model training, content generation, and royalty distribution, creating a sustainable ecosystem where creativity is rewarded. This addresses the growing concern about AI replacing artists by instead empowering them with new revenue streams.",
-        skills: [
-
-        ],
-        achievements: [
-
-        ],
-        links: [
-          {
-            label: "dytto-gen Platform",
-            url: "https://dytto-gen.vercel.app/"
-          },
-          {
-            label: "Creator Onboarding",
-            url: "https://dytto-gen.vercel.app/creators"
           }
         ]
       }
