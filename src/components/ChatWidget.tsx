@@ -427,6 +427,10 @@ export default function ChatWidget() {
           font-size: 14px;
           font-family: inherit;
         }
+        .maya-chat-button svg {
+          width: 24px;
+          height: 24px;
+        }
         .maya-chat-button:hover {
           background: rgba(197, 165, 114, 0.2);
           border-color: rgba(197, 165, 114, 0.5);
@@ -506,8 +510,12 @@ export default function ChatWidget() {
           .maya-chat-button {
             top: 20px;
             right: 20px;
-            padding: 14px;
+            padding: 16px;
             border-radius: 16px;
+          }
+          .maya-chat-button svg {
+            width: 20px;
+            height: 20px;
           }
           .maya-chat-button span {
             display: none;
