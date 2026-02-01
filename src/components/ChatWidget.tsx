@@ -506,17 +506,22 @@ export default function ChatWidget() {
           .maya-chat-button {
             top: 20px;
             right: 20px;
-            padding: 16px;
+            padding: 14px;
             border-radius: 16px;
           }
+          .maya-chat-button span {
+            display: none;
+          }
           .maya-chat-window {
-            top: 70px;
+            position: fixed;
+            top: 78px;
             right: 10px;
             left: 10px;
+            bottom: 10px;
             width: auto;
             max-width: none;
             height: auto;
-            max-height: calc(100vh - 90px);
+            max-height: none;
             border-radius: 14px;
           }
         }
