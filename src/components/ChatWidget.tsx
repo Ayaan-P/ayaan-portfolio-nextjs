@@ -202,39 +202,10 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* Chat Button — matches nav menu-button style */}
+      {/* Chat Button — uses CSS class to match nav menu-button alignment */}
       <button
+        className="maya-chat-button"
         onClick={() => setIsOpen((prev) => !prev)}
-        style={{
-          position: 'fixed',
-          top: '10px',
-          right: '10px',
-          background: 'rgba(26, 26, 26, 0.9)',
-          border: '1px solid rgba(197, 165, 114, 0.3)',
-          borderRadius: '12px',
-          padding: '12px',
-          color: 'white',
-          cursor: 'pointer',
-          zIndex: 1000,
-          transition: 'all 0.3s ease',
-          backdropFilter: 'blur(10px)',
-          WebkitBackdropFilter: 'blur(10px)',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-          fontSize: '14px',
-          fontFamily: 'inherit',
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.background = 'rgba(197, 165, 114, 0.2)';
-          e.currentTarget.style.borderColor = 'rgba(197, 165, 114, 0.5)';
-          e.currentTarget.style.transform = 'scale(1.05)';
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.background = 'rgba(26, 26, 26, 0.9)';
-          e.currentTarget.style.borderColor = 'rgba(197, 165, 114, 0.3)';
-          e.currentTarget.style.transform = 'scale(1)';
-        }}
         aria-label={isOpen ? 'Close chat' : 'Chat with Maya'}
       >
         {isOpen ? (
@@ -253,28 +224,8 @@ export default function ChatWidget() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div
-          style={{
-            position: 'fixed',
-            top: '60px',
-            right: '10px',
-            width: '380px',
-            maxWidth: 'calc(100vw - 20px)',
-            height: '500px',
-            maxHeight: 'calc(100vh - 80px)',
-            background: 'rgba(16, 16, 16, 0.95)',
-            border: '1px solid rgba(197, 165, 114, 0.2)',
-            borderRadius: '16px',
-            backdropFilter: 'blur(20px)',
-            WebkitBackdropFilter: 'blur(20px)',
-            zIndex: 999,
-            display: 'flex',
-            flexDirection: 'column' as const,
-            overflow: 'hidden',
-            animation: 'chatFadeIn 0.2s ease-out',
-            boxShadow: '0 20px 60px rgba(0,0,0,0.5)',
-          }}
-        >
+        <div className="maya-chat-window">
+
           {/* Header */}
           <div
             style={{
@@ -359,67 +310,89 @@ export default function ChatWidget() {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input */}
-          <div
-            style={{
-              padding: '12px',
-              borderTop: '1px solid rgba(197, 165, 114, 0.1)',
-            }}
-          >
+          {/* Input / Offline State */}
+          {isOffline ? (
+            <div className="maya-offline-banner">
+              <div className="maya-offline-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M8 15s1.5-2 4-2 4 2 4 2" />
+                  <line x1="9" y1="9" x2="9.01" y2="9" />
+                  <line x1="15" y1="9" x2="15.01" y2="9" />
+                </svg>
+              </div>
+              <div className="maya-offline-text">
+                <span className="maya-offline-label">maya is offline right now</span>
+                <a href="mailto:ayaansp@gmail.com" className="maya-offline-email">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="M22 7l-10 7L2 7" />
+                  </svg>
+                  ayaansp@gmail.com
+                </a>
+              </div>
+            </div>
+          ) : (
             <div
               style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(197, 165, 114, 0.15)',
-                borderRadius: '12px',
-                padding: '8px 12px',
+                padding: '12px',
+                borderTop: '1px solid rgba(197, 165, 114, 0.1)',
               }}
             >
-              <input
-                ref={inputRef}
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={handleKeyDown}
-                placeholder={isOffline ? 'Maya is offline...' : 'Ask Maya anything...'}
-                disabled={isOffline}
+              <div
                 style={{
-                  flex: 1,
-                  background: 'transparent',
-                  border: 'none',
-                  outline: 'none',
-                  color: '#fff',
-                  fontSize: '13px',
-                  fontFamily: 'inherit',
-                }}
-              />
-              <button
-                onClick={sendMessage}
-                disabled={!input.trim() || isStreaming || isOffline}
-                style={{
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '8px',
-                  border: 'none',
-                  background: 'rgba(197, 165, 114, 0.2)',
-                  color: 'rgba(197, 165, 114, 0.9)',
-                  cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'center',
-                  opacity: !input.trim() || isStreaming || isOffline ? 0.3 : 1,
-                  transition: 'opacity 0.2s',
+                  gap: '8px',
+                  background: 'rgba(255,255,255,0.05)',
+                  border: '1px solid rgba(197, 165, 114, 0.15)',
+                  borderRadius: '12px',
+                  padding: '8px 12px',
                 }}
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 2L11 13" />
-                  <path d="M22 2L15 22L11 13L2 9L22 2Z" />
-                </svg>
-              </button>
+                <input
+                  ref={inputRef}
+                  type="text"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  placeholder="Ask Maya anything..."
+                  style={{
+                    flex: 1,
+                    background: 'transparent',
+                    border: 'none',
+                    outline: 'none',
+                    color: '#fff',
+                    fontSize: '13px',
+                    fontFamily: 'inherit',
+                  }}
+                />
+                <button
+                  onClick={sendMessage}
+                  disabled={!input.trim() || isStreaming}
+                  style={{
+                    width: '32px',
+                    height: '32px',
+                    borderRadius: '8px',
+                    border: 'none',
+                    background: 'rgba(197, 165, 114, 0.2)',
+                    color: 'rgba(197, 165, 114, 0.9)',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    opacity: !input.trim() || isStreaming ? 0.3 : 1,
+                    transition: 'opacity 0.2s',
+                  }}
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 2L11 13" />
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" />
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       )}
 
@@ -431,6 +404,121 @@ export default function ChatWidget() {
         @keyframes chatDot {
           0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
           40% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Maya Chat Button — mirrors .menu-button positioning */
+        .maya-chat-button {
+          position: fixed;
+          top: 10px;
+          right: 10px;
+          background: rgba(26, 26, 26, 0.9);
+          border: 1px solid rgba(197, 165, 114, 0.3);
+          border-radius: 12px;
+          padding: 12px;
+          color: white;
+          cursor: pointer;
+          z-index: 1000;
+          transition: all 0.3s ease;
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 14px;
+          font-family: inherit;
+        }
+        .maya-chat-button:hover {
+          background: rgba(197, 165, 114, 0.2);
+          border-color: rgba(197, 165, 114, 0.5);
+          transform: scale(1.05);
+        }
+
+        /* Chat Window */
+        .maya-chat-window {
+          position: fixed;
+          top: 60px;
+          right: 10px;
+          width: 380px;
+          max-width: calc(100vw - 20px);
+          height: 500px;
+          max-height: calc(100vh - 80px);
+          background: rgba(16, 16, 16, 0.95);
+          border: 1px solid rgba(197, 165, 114, 0.2);
+          border-radius: 16px;
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          z-index: 999;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          animation: chatFadeIn 0.2s ease-out;
+          box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        /* Offline Banner */
+        .maya-offline-banner {
+          padding: 14px 16px;
+          border-top: 1px solid rgba(197, 165, 114, 0.1);
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          background: rgba(197, 165, 114, 0.05);
+        }
+        .maya-offline-icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.06);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: rgba(255, 255, 255, 0.35);
+          flex-shrink: 0;
+        }
+        .maya-offline-text {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          min-width: 0;
+        }
+        .maya-offline-label {
+          font-size: 12px;
+          color: rgba(255, 255, 255, 0.4);
+          font-style: italic;
+        }
+        .maya-offline-email {
+          font-size: 13px;
+          color: rgba(197, 165, 114, 0.85);
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          transition: color 0.2s;
+        }
+        .maya-offline-email:hover {
+          color: rgba(197, 165, 114, 1);
+          text-decoration: underline;
+        }
+
+        /* Mobile: match menu-button's mobile position */
+        @media (max-width: 768px) {
+          .maya-chat-button {
+            top: 20px;
+            right: 20px;
+            padding: 16px;
+            border-radius: 16px;
+          }
+          .maya-chat-window {
+            top: 70px;
+            right: 10px;
+            left: 10px;
+            width: auto;
+            max-width: none;
+            height: auto;
+            max-height: calc(100vh - 90px);
+            border-radius: 14px;
+          }
         }
       `}</style>
     </>
