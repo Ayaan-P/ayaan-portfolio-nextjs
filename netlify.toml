@@ -5,6 +5,13 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Proxy Maya API through Netlify (avoids CORS)
+[[redirects]]
+  from = "/maya-api/*"
+  to = "https://maya.ayaanpupala.com/:splat"
+  status = 200
+  force = true
+
 # Optimize caching for static assets
 [[headers]]
   for = "/images/*"

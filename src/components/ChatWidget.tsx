@@ -525,11 +525,11 @@ export default function ChatWidget() {
             top: 78px;
             right: 10px;
             left: 10px;
-            bottom: 10px;
+            bottom: auto;
             width: auto;
             max-width: none;
-            height: auto;
-            max-height: none;
+            height: 55vh;
+            max-height: calc(100vh - 100px);
             border-radius: 14px;
           }
         }
