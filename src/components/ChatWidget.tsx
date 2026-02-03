@@ -92,7 +92,7 @@ export default function ChatWidget() {
           model: 'clawdbot:concierge',
           input: trimmed,
           user: getVisitorId(),
-          stream: true,
+          stream: false,
         }),
       });
 
@@ -109,74 +109,13 @@ export default function ChatWidget() {
         return;
       }
 
-      const reader = res.body?.getReader();
-      if (!reader) throw new Error('No reader');
-
-      const decoder = new TextDecoder();
-      let accumulated = '';
-      let buffer = '';
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        buffer += decoder.decode(value, { stream: true });
-        const lines = buffer.split('\n');
-        buffer = lines.pop() || '';
-
-        for (const line of lines) {
-          if (!line.startsWith('data: ')) continue;
-          const data = line.slice(6).trim();
-          if (!data || data === '[DONE]') continue;
-
-          try {
-            const parsed = JSON.parse(data);
-
-            if (parsed.type === 'response.output_text.delta') {
-              accumulated += parsed.delta || '';
-              const current = accumulated;
-              setMessages((prev) =>
-                prev.map((m) =>
-                  m.id === assistantId ? { ...m, content: current } : m
-                )
-              );
-            } else if (parsed.type === 'response.completed' || parsed.type === 'response.failed') {
-              setMessages((prev) =>
-                prev.map((m) =>
-                  m.id === assistantId ? { ...m, streaming: false } : m
-                )
-              );
-            }
-          } catch {
-            // skip malformed JSON — also handle non-streaming response
-          }
-        }
-      }
-
-      // If we got no streaming events, try parsing as regular JSON
-      if (!accumulated) {
-        try {
-          const text = decoder.decode();
-          if (buffer) {
-            const json = JSON.parse(buffer);
-            const outputText = json?.output?.[0]?.content?.[0]?.text || '';
-            if (outputText) {
-              accumulated = outputText;
-              setMessages((prev) =>
-                prev.map((m) =>
-                  m.id === assistantId ? { ...m, content: outputText, streaming: false } : m
-                )
-              );
-            }
-          }
-        } catch {
-          // ignore
-        }
-      }
-
+      const json = await res.json();
+      const outputText = json?.output?.[0]?.content?.[0]?.text || '';
       setMessages((prev) =>
         prev.map((m) =>
-          m.id === assistantId ? { ...m, streaming: false } : m
+          m.id === assistantId
+            ? { ...m, content: outputText || 'hmm, no response. try again?', streaming: false }
+            : m
         )
       );
     } catch {

@@ -37,7 +37,9 @@ Track all proposed, approved, and rejected changes here.
 
 ## ✅ Approved
 
-<!-- Move decisions here once approved with date and outcome -->
+### [2026-02-01] Fix outdated content — APPROVED
+### [2026-02-01] Remove dead code — APPROVED
+### [2026-02-01] Add GA4 analytics — APPROVED
 
 ---
 
