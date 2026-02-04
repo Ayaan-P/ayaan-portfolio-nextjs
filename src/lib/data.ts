@@ -34,7 +34,7 @@ export const profileData: ProfileData = {
       sectionTitle: "",
       aboutText: `
 
-Currently building Dytto, an AI-powered journaling app that captures your daily life and builds a personal context layer — so any AI can know you the way your best friend does.`,
+Currently building Dytto, a personal context platform that makes any AI know you like your best friend does — with a journaling app as one of its interfaces.`,
       date: "",
       imgSrc: "/images/profile.jpg",
       about: true,
@@ -45,7 +45,7 @@ My professional experience spans from federal contracting work in Washington DC 
 
 With a Master's in Artificial Intelligence from Northwestern University, I'm deepening my expertise in neural networks, computer vision, and natural language processing. My goal is to create intelligent systems that not only process data efficiently but also provide meaningful insights and enhance human experiences.
 
-The culmination of my passion and expertise is Dytto, an AI-powered journaling app I founded that captures your daily experiences and transforms them into beautiful stories — while quietly building a personal context layer underneath. Dytto collects rich context (location, calendar, health, weather, preferences) and serves it via API to any AI agent, making every AI interaction instantly personalized. It's a journaling app on the surface and Plaid for personal context underneath.`,
+The culmination of my passion and expertise is Dytto, a personal context platform I founded. At its core, Dytto continuously collects rich personal context — location, calendar, health, weather, preferences — and serves it via API to any AI agent, making every interaction instantly personalized. Think Plaid for personal context. The platform includes a journaling app that surfaces your context as beautiful daily stories, but the context engine is the real product — any AI can plug in.`,
         skills: [
           "Full Stack Development (React, Node.js, TypeScript)",
           "Machine Learning & Deep Learning (PyTorch, TensorFlow)",
@@ -59,7 +59,7 @@ The culmination of my passion and expertise is Dytto, an AI-powered journaling a
         achievements: [
           "Developed AI models for early cancer detection with 85%+ accuracy",
           "Built scalable web applications serving thousands of federal users",
-          "Founded Dytto - AI journaling app and personal context platform",
+          "Founded Dytto - personal context platform for AI",
           "Completed MS in AI at Northwestern University with 4.0 GPA",
           "Published research on drug-target interaction prediction"
         ]
@@ -100,12 +100,12 @@ The culmination of my passion and expertise is Dytto, an AI-powered journaling a
     {
       id: 2,
       sectionTitle: "Dytto",
-      subtitle: "AI Journal & Context Platform",
-      aboutText: "AI-powered journaling app that captures your life and builds a personal context layer — so any AI can know you.",
+      subtitle: "Personal Context Platform",
+      aboutText: "Personal context engine that makes any AI know you — with a journaling app as one interface.",
       date: "Ongoing",
       imgSrc: "/images/dytto-icon.png",
       expandedDetails: {
-        fullDescription: "Dytto is an AI-powered journaling app that transforms how people capture and reflect on their daily experiences — while building a personal context layer underneath. It collects rich context (location, calendar, health, weather, preferences) and serves it via API, so any AI agent can deliver instantly personalized experiences. Journaling app on the surface, Plaid for personal context underneath.",
+        fullDescription: "Dytto is a personal context platform — Plaid for personal context. It continuously collects rich context (location, calendar, health, weather, preferences) and serves it via API so any AI agent can deliver instantly personalized experiences. The platform includes a journaling app that surfaces your context as beautiful daily stories, but the context engine is the core — any AI can plug in.",
         skills: [
           "React & Next.js",
           "AI/ML Integration",
@@ -115,8 +115,8 @@ The culmination of my passion and expertise is Dytto, an AI-powered journaling a
           "NLP & Context Analysis"
         ],
         achievements: [
-          "AI-powered daily story generation from captured context",
-          "Personal context API serving data to any AI agent",
+          "Personal context API serving any AI agent",
+          "Journaling app as one frontend to the context engine",
           "Bidirectional: AI reads context and writes back what it learns"
         ],
         links: [
@@ -298,15 +298,15 @@ The culmination of my passion and expertise is Dytto, an AI-powered journaling a
   projects: [
     {
       id: 1,
-      sectionTitle: "dytto - AI Journal & Context Platform",
-      subtitle: "Your Story, Your Context, Your AI Personalized",
-      aboutText: "AI-powered journaling app that captures your daily life into beautiful stories — and builds a personal context layer that makes every AI you use smarter.",
+      sectionTitle: "dytto - Personal Context Platform",
+      subtitle: "The Context Layer for AI",
+      aboutText: "Personal context engine that continuously learns who you are — powering a journaling app, an API for any AI agent, and personalized experiences everywhere.",
       date: "2025",
       imgSrc: "/images/logo.png",
       expandedDetails: {
-        fullDescription: "dytto is an AI-powered journaling app that automatically captures your daily experiences and transforms them into meaningful narratives — while quietly building a personal context layer underneath. It collects location, calendar, health, weather, and preference data, then serves it via API so any AI agent can deliver instantly personalized experiences.",
+        fullDescription: "dytto is a personal context platform that continuously learns who you are — location, calendar, health, weather, preferences — and serves that context via API so any AI agent can deliver instantly personalized experiences. It includes a journaling app that surfaces your context as beautiful daily stories, but the context engine is the core product.",
         skills: ["Flask", "Python", "Supabase", "pgvector", "Google Gemini", "Swift/iOS", "React Native", "NLP", "Vector Embeddings"],
-        achievements: ["AI-powered daily story generation and journaling", "Personal context API serving any AI agent", "Built semantic search over personal memories using pgvector", "Live on App Store with active users"],
+        achievements: ["Personal context API serving any AI agent", "Journaling app frontend with AI-powered daily stories", "Built semantic search over personal context using pgvector", "Live on App Store with active users"],
         links: [
           {
             label: "App Landing Page",
